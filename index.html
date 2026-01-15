@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Welcome to the Book Library</h1>
+        <p>Explore our collection of books and find your next read!</p>
+    </div>
+    <div>
+        <dialog id="addBookDialog">
+            <form id="addBookForm">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required><br><br>
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required><br><br>
+                <label for="pages">Pages:</label>
+                <input type="text" id="pages" name="pages" required><br><br>
+                <label for="readStatus">Read Status:</label>
+                <select id="readStatus" name="readStatus" required>
+                    <option value="not read">Not Read</option>
+                    <option value="read">Read</option>
+                </select><br><br>
+                <button type="submit">Add Book</button>
+                <button type="button" onclick="closeDialog()">Cancel</button>
+            </form>
+        </dialog>
+        <button onclick="showDialog()">Add Book</button>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
