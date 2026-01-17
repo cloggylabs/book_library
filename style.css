@@ -64,6 +64,11 @@ body {
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
     max-width: 400px;
     width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
 }
 
 #addBookDialog::backdrop {
