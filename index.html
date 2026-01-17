@@ -7,29 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div id="header">
         <h1>Welcome to the Book Library</h1>
         <p>Explore our collection of books and find your next read!</p>
     </div>
-    <div>
+    <div id="modal">
         <dialog id="addBookDialog">
             <form id="addBookForm">
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required><br><br>
-                <label for="author">Author:</label>
-                <input type="text" id="author" name="author" required><br><br>
-                <label for="pages">Pages:</label>
-                <input type="text" id="pages" name="pages" required><br><br>
-                <label for="readStatus">Read Status:</label>
+                <h3>Add New Book</h3>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter book title" required>
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" placeholder="Enter author name" required>
+                <label for="pages">Pages</label>
+                <input type="number" id="pages" name="pages" placeholder="Number of pages" required>
+                <label for="readStatus">Read Status</label>
                 <select id="readStatus" name="readStatus" required>
                     <option value="not read">Not Read</option>
                     <option value="read">Read</option>
-                </select><br><br>
-                <button type="submit">Add Book</button>
-                <button type="button" onclick="closeDialog()">Cancel</button>
+                </select>
+                <div class="form-buttons">
+                    <button type="button" onclick="closeDialog()">Cancel</button>
+                    <button type="submit">Add Book</button>
+                </div>
             </form>
         </dialog>
         <button onclick="showDialog()">Add Book</button>
+    </div>
+    <div id="library">
+        <h2>My Book Library</h2>
+        <div id="bookList">
+            <ul id="bookListUl">
+                
+            </ul><!-- Books will be displayed here -->
+        </div>
+
     </div>
     <script src="logic.js"></script>
 </body>
